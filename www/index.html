@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
+            https://cordova.apache.org/docs/en/latest/
+        Some notes:
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="onsenui/css/onsenui.css">
+        <link rel="stylesheet" href="onsenui/css/onsen-css-components.min.css">
+        <!-- <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" /> -->
+        <script src="onsenui/js/onsenui.min.js"></script>
+        <title>Course Work</title>
+    </head>
+    <body>
+        <ons-page> 
+          <ons-toolbar>   
+              <div style="text-align: center" class="center">Course Work - A. Kostadinov (124849) & S. Slavkov (125142)</div>
+          </ons-toolbar>
+
+          <ons-tabbar swipeable position="auto">
+            <ons-tab page="tab1.html" label="Album" icon="ion-ios-book, material:md-book" active-icon="ion-ios-book"></ons-tab>
+            <ons-tab page="tab2.html" label="Take Photo" icon="ion-ios-camera, material:md-camera" active-icon="ion-ios-camera"></ons-tab>
+            <ons-tab page="tab3.html" label="About" icon="ion-ios-settings, material:md-settings" active-icon="ion-ios-settings"></ons-tab>
+          </ons-tabbar>
+        </ons-page>
+
+        <template id="tab1.html">
+          <ons-page id="Tab1">
+            <h2 style="text-align: center; margin-top: 20px;">My Album</h2>
+            <br>
+
+            <div style="text-align: center; margin: 10px 0" id="datePicker">
+              <ons-label for="date">Pick a date:</ons-label>
+              <ons-input type="date" name="date" id="date">
+            </div>
+            <ons-div id="imagesTaken" style="font-size: small !important;"></ons-div>
+          </ons-page>
+        </template>
+           
+        <template id="tab2.html">
+          <ons-page id="Tab2">
+            <div data-role="header" class="header" style="margin-top: 20px">
+              <h2 id="app-title">Photo Studio</h2>
+            </div>
+    
+            <div>
+                <div role="main" class="ui-content" style="text-align: center;">
+                  <ons-button id="camera-btn" data-role="button" data-icon="camera">Take Photo<i class="fa-solid fa-camera" style="margin-left: 10px;"></i></ons-button>
+                </div>
+            </div>
+        
+            <div data-role="footer" data-position="fixed">
+                <h1 id="app-title"></h1>
+            </div>
+          </ons-page>
+        </template>
+
+        <template id="tab3.html">
+          <ons-page id="Tab3">
+            <div style="text-align: center;" id="version">
+              <h2>About my device</h2>
+              <br>
+              <div class="Table">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Specifications</th>
+                      <th>Stats</th>
+                    </tr>
+                  </thead>
+                  
+                  <tbody>
+                    <tr>
+                      <td>Cordova Version</td>
+                      <td id="cordovaVersion"></td>
+                    </tr>
+
+                    <tr>
+                      <td>Manufacturer</td>
+                      <td id="manufacturer"></td>
+                    </tr>
+
+                    <tr>
+                      <td>Virtual Device</td>
+                      <td id="isVirtual"></td>
+                    </tr>
+
+                    <tr>
+                      <td>Device Model</td>
+                      <td id="deviceModel"></td>
+                    </tr>
+
+                    <tr>
+                      <td>Operating System</td>
+                      <td id="operatingSystem"></td>
+                    </tr>
+
+                    <tr>
+                      <td>Device UUID</td>
+                      <td id="uuid"></td>
+                    </tr>
+
+                    <tr>
+                      <td>Serial Number</td>
+                      <td id="serial"></td>
+                    </tr>
+
+                    <tr>
+                      <td>OS Number</td>
+                      <td id="osVersion"></td>
+                    </tr>
+
+                    <tr>
+                      <td>Connetion Type</td>
+                      <td id="connectionType"></td>
+                    </tr>
+
+                    <tr>
+                      <td>Battery Percentage</td>
+                      <td style="display: flex; justify-content: space-between;">
+                        <ons-range disabled type="range" id="batteryStatus" class="center" style="opacity: 100%;"></ons-range>
+                        <span id="batteryStatusLevel" style="margin-top: 5px"></span>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>Device Plugged</td>
+                      <td>
+                        <input type="checkbox" id="isPlugged">
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </ons-page>
+        </template>   
+
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+        <script src="cordova.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>

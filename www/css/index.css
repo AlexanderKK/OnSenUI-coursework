@@ -1,0 +1,205 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;
+    user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:#E4E4E4;
+    background-image:linear-gradient(to bottom, #A7A7A7 0%, #E4E4E4 51%);
+    font-family: system-ui, -apple-system, -apple-system-font, 'Segoe UI', 'Roboto', sans-serif;
+    font-size:12px;
+    height:100vh;
+    margin:0px;
+    padding:0px;
+    /* Padding to avoid the "unsafe" areas behind notches in the screen */
+    padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
+    text-transform:uppercase;
+    width:100%;
+}
+
+/* Portrait layout (default) */
+.app {
+    background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
+    position:absolute;             /* position in the center of the screen */
+    left:50%;
+    top:50%;
+    height:50px;                   /* text area height */
+    width:225px;                   /* text area width */
+    text-align:center;
+    padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+    margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
+                                   /* offset horizontal: half of text area width */
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position:left center;
+        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
+        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
+                                      /* offset horizontal: half of image width and text area width */
+    }
+}
+
+h1 {
+    font-size:24px;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+}
+
+h2 {
+    text-align: center;
+}
+
+.album-photo{
+    padding: 15px 15px 15px;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
+    -moz-box-shadow: 0 1px 2px rgba(34,25,25,0.4);
+    -webkit-box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
+    filter: sepia(75%);
+    -webkit-filter: sepia(75%);
+    margin: 0.75vw 1vw;
+    width: 15vw;
+  }
+
+#imagesTaken{
+    margin: 0 8vw;
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+
+.imgTaken{
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.deleteBtn {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    background: #c8baba;
+}
+
+.deleteBtn i {
+    font-size: 15px;
+}
+
+ons-button{
+    margin-top: 10vh !important;
+    cursor: pointer !important;
+    padding: 5px !important;
+    font-size: larger;
+    font-weight: bold !important;
+    background-image:linear-gradient(to bottom, #09eaff 0%, #00164a 100%) !important;
+    height: 50px !important;
+    width: 200px !important;
+}
+
+.event {
+    border-radius:4px;
+    color:#FFFFFF;
+    font-size:12px;
+    margin:0px 30px;
+    padding:2px 0px;
+}
+
+.event.listening {
+    background-color:#333333;
+    display:block;
+}
+
+.event.received {
+    background-color:#4B946A;
+    display:none;
+}
+
+#deviceready.ready .event.listening { display: none; }
+#deviceready.ready .event.received { display: block; }
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    body {
+        background-image:linear-gradient(to bottom, #585858 0%, #1B1B1B 51%);
+    }
+}
+
+.page__background{
+    background-image: linear-gradient(to bottom, #c3c3c3 0%, #dadada 51%);
+    background-position: center;
+    background-repeat: no-repeat;
+} 
+
+table,tbody,thead,td,tr{
+    padding: 5px;
+    font-size: large;
+    border: 1px solid black;
+    background-image: linear-gradient(to bottom, #ffffff 0%, #dedede 51%);
+}
+
+.Table{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.exif {
+    margin: 10px 19px 5px;
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+}
+
+#datePicker {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#datePicker ons-label {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+#date input {
+    font-size: 18px;
+}
