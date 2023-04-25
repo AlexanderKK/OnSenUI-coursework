@@ -1,19 +1,27 @@
 # OnSenUI-project
 
  OnSenUI Coursework Project For Academic Purposes.
+ <br>
  Simple cordova application to take photos and write image data(containing exif data) to json file and provide functionality like read, create and delete.
+ <br>
  It also displays full information and properties of the used simulator/device and it has messages to nofify the user about the actions performed.
+ <br>
+ <br>
  The app features 3 main pages with the following functionality:
- • Page 1 "Album": Album containing all photos taken with search by date field so you can organize your photos better.
- • Page 2 "Take Photo": On this page you can take photos and they will be saved inside the json file provided.
- • Page 3 "About": Here you can see all the information about the device you are using.
+<ul>
+ <li>Page 1 "Album": Album containing all photos taken with search by date field so you can organize your photos better.</li>
+ <li>Page 2 "Take Photo": On this page you can take photos and they will be saved inside the json file provided.</li>
+ <li>Page 3 "About": Here you can see all the information about the device you are using.</li>
+</ul>
 
 # Dependencies:
 
- • Cordova
- • Onsen UI
- • Npm
- • Apache Server/XAMPP (or something similar which supports PHP)
+<ul>
+ <li>Cordova</li>
+ <li>Onsen UI</li>
+ <li>Npm</li>
+ <li>Apache Server/XAMPP (or something similar which supports PHP)</li>
+</ul>
 
 # Installation & Usage
 
@@ -32,4 +40,4 @@
     2. Start your server and make sure it listens on port 80.
 
  # 4. Running the project
-    1. Finally you will have to run "simulate android" in order to execute the project and you are done.
+    1. Finally you will have to run "simulate android" in order to execute the project.
