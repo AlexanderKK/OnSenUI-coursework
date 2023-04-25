@@ -23,13 +23,13 @@
     3. After this execute "npm fund" and your are done with this part.
 
  # 2. Cordova dependencies installation
-    4. Now you have to add simulation platform to run with cordova. You might do so with executing "cordova platform add android" or "cordova platform add browser".
+    1. Now you have to add simulation platform to run with cordova. You might do so with executing "cordova platform add android" or "cordova platform add browser".
     By doing so the needed plugins will be installed and the simulation platform will be added.
 
  # 3. Ensuring Back-end functionality for read, create, delete operations
-    5. Copy the folder "OnSenBlog" into your apache server directory(htdocs), same for XAMPP.
+    2. Copy the folder "OnSenBlog" into your apache server directory(htdocs), same for XAMPP.
     This way photos taken will be saved inside the JSON file provided and can be browsed and deleted.
-    6. Start your server and make sure it listens on port 80.
+    3. Start your server and make sure it listens on port 80.
 
  # 4. Running the project
     1. Finally you will have to run "simulate android" in order to execute the project and you are done.
