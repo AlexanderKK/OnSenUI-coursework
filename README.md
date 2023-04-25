@@ -2,7 +2,7 @@
 
  OnSenUI Coursework Project For Academic Purposes.
  <br>
- Simple cordova application to take photos and write image data(containing exif data) to json file and provide functionality like read, create and delete.
+ Simple cordova/onsen-ui application to take photos and write image data(containing exif data) to json file and provide functionality like read, create and delete.
  <br>
  It also displays full information and properties of the used simulator/device and it has messages to nofify the user about the actions performed.
  <br>
