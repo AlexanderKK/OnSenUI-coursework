@@ -27,9 +27,9 @@
     By doing so the needed plugins will be installed and the simulation platform will be added.
 
  # 3. Ensuring Back-end functionality for read, create, delete operations
-    2. Copy the folder "OnSenBlog" into your apache server directory(htdocs), same for XAMPP.
+    1. Copy the folder "OnSenBlog" into your apache server directory(htdocs), same for XAMPP.
     This way photos taken will be saved inside the JSON file provided and can be browsed and deleted.
-    3. Start your server and make sure it listens on port 80.
+    2. Start your server and make sure it listens on port 80.
 
  # 4. Running the project
     1. Finally you will have to run "simulate android" in order to execute the project and you are done.
