@@ -4,7 +4,6 @@
     $data = $_POST['data'];
 
     if($data != null) {
-        // file_put_contents("cart.json", "");
         file_put_contents("data.json", $data);
     }
 
